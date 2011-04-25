@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<HEAD>
+<META http-equiv='Content-Type' content='text/html; charset=UTF-8'> 
+</HEAD>
+<base href={!base_url}>
+{!jquery.js}
+<link rel="stylesheet" href="main.css" /> 
+<style>
+.table_add_cell, .span {
+  vertical-align: top;
+}
+
+</style>
+<title>{!apptitle}</title>
+
+<body>
+<h1>timedesk</h1>
+<a href=toggle>{call NextAction}</a> <a href=start>MEMO</a> <a href=report>REPORT</a>
+          {!content}
+
+
+<script>
+
+$(function() {
+  $(".active_check").change( function() {
+     var sum = 0;
+	 $(".active_check:checked").each( function() {
+	    sum += parseFloat($(this).parents("tr").find(".span").html());
+	 });
+	 var minutes = Math.round(sum*60);
+     $("#checked_total").html(sum+" hour(s) ="+minutes+" min(s)");
+  });
+});
+
+</script>
+</body>

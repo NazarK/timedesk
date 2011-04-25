@@ -1,0 +1,4 @@
+link=Ссылка
+title=Текст
+Add a new record=Добавить
+no records=пусто

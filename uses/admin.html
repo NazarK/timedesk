@@ -1,0 +1,24 @@
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8;'>
+<base href="{!base_url}"/>
+{!admin.css}
+{!jquery.js}
+<h1>Панель администратора</h1>
+<a class=admin_menu href=admin/pages althref=admin/edit arg="">Страницы сайта</a>
+<a class=admin_menu href=admin/images>Картинки</a>
+
+<a class=admin_menu href=admin/table/edit/rassilka althref=admin/table/edit arg=rassilka>Рассылка</a>
+<a class=admin_menu href=admin/table/edit/zayavka althref=admin/table/edit arg=zayavka>Заявки</a>
+
+<a class=admin_menu href=admin/pass>Пароль</a>
+<a class=admin_menu href=admin/email>Емейл</a>
+<a class=admin_menu href=admin/logout>Выйти</a>
+<div>
+{!content}
+</div>
+<script>
+$(function() {
+  $("a[href='{call self_q}']").addClass("current_menu");
+  $("a[althref='{call self_q}'][arg='']").addClass("current_menu");
+  $("a[althref='{call self_q}'][arg='{call arg 0}']").addClass("current_menu");
+});
+</script>

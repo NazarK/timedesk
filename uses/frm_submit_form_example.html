@@ -1,0 +1,23 @@
+{!submit_form.css}
+{!submit_form.js}
+<div id=SubmitForm>
+
+<input type=hidden name=subject value='ONLINE ЗАКАЗ - отправлено с сайта'>
+<input type=hidden name=success value='Ваше сообщение отправлено.'>
+<table>
+<checkbox value='some checkbox'></checkbox>
+<tr><td>Наименование организации<td><input mandatory=1>
+<tr><td>Контактное лицо<td><input mandatory=1>
+<tr><td>Телефон<td><input mandatory=1>
+<tr><td>E-mail<td><input mandatory=1>
+<tr><td>Другие контакты<td><input hint='skype, icq, агент'>
+<tr><td>Подробная информация о заказе<td><textarea hint='наименование товара, количество экземпляров, прочее' mandatory=1></textarea>
+<tr><td>Прикрепить файл<td><file size=2000000></file>
+</table>
+
+Поля отмеченные<span class=mandatoryStar>*</span>, обязательны для заполнения<br>
+<br>
+
+<input type=submit value=Отправить>
+
+</div>

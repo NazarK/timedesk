@@ -1,0 +1,76 @@
+SQP Web Application Build Engine
+
+
+1.Basic description
+2.Using text for pages
+3.Table editor
+4.Databases
+5.Appendix: Files Description
+
+BASIC DESCRIPTION
+
+app.php consists of functions named
+
+page_query_one($param1,$param2)
+page_query_two($param1,$param2)
+
+to call this functions you should query urls
+
+http://sqp/?q=query/one/param1/param2
+http://sqp/?q=query/two/param1/param2
+
+
+USING TEXT FOR PAGES
+
+Also you may use simple text for rendering pages
+
+if you put sometext.txt file into pages/ folder it will be available by query
+http://sqp/?q=sometext
+
+
+TABLE EDITOR
+
+Another usefull feature is TableEditor component
+
+You should define editable fields in app.php
+$tables["users"]["fields"][] = "username";
+$tables["users"]["fields"][] = "password";
+$tables["users"]["fields"][] = "email";
+
+And then create  users page via this function in app.php:
+
+function page_users($action="",$id="") {
+  return table_edit("users","users",$action,$id);
+}
+
+And here we go you got some kind of table editor by query
+
+http://sqp/?q=users
+
+
+DATABASES
+
+SQP works with both sqlite2 database and mysql database
+all functions like db_query, db_* functions work same with both databases
+
+To choose database that you need edit conf.php and set
+either define("mysql",1)  or define("sqlite2",1)
+
+to edit sqlite database you may use
+sqlitestudio.one.pl (found in wikipedia on keyword sqlite)
+
+
+
+APPENDIX: FILES DESCRIPTION
+
+index.php - command line parser
+conf.php - configuration file
+app.php - application file
+bios.php - system itself 
+main.html - template
+main.css - template css
+menu.txt - menu file
+pages/ - txt pages
+images/ - images used by CMS
+.htaccess - apache mod_rewrite tweak for nice urls
+

@@ -1,0 +1,28 @@
+.mandatoryRemind {
+   border: 1px solid #FE1573 !important;  
+}
+
+.inputCheckbox {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.inputField {
+  border: 1px solid #cccccc;
+  width: 350px;
+  background: #E9E9E9;
+  margin-bottom: 10px;
+  padding: 6px 10px;
+  font-size: 1em
+}
+
+#SubmitForm td {
+  vertical-align: top;
+}
+.mandatoryStar {
+  color: #FE1573;
+}
+.hint {
+  color: #888;
+}

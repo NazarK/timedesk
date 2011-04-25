@@ -1,0 +1,29 @@
+body {
+  font-family:Trebuchet MS;
+  font-size:14px;
+}
+
+a { color: #000; text-decoration: none; outline: none; }
+a:hover {color: #408EDB }
+.admin_menu { color: #fff; padding:4px; text-decoration:none;}
+.admin_menu:visited { color: #fff; }
+.admin_menu:hover { color:#fff; background: #666;}
+.table_edit {}
+.table_edit td {background: #eee;}
+.admin_menu {
+  padding:10px;
+  background:#888;
+  line-height: 40px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.current_menu {
+  background: #444 !important;
+}
+textarea {
+  border: 1px solid #000;
+}
+
+img {
+  border: 0;
+}
